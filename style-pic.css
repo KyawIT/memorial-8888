@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(37, 37, 37);
+}
+
+.grid{
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   width: 100vw;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(500px, 500px));
+   column-gap: 10px;
+   row-gap: 10px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+video{
+    width: 500px;
+    height: 500px;
+}
+
+.showcase{
+    position: relative;
+    right: 0;
+    width: 100%;
+    padding: 75px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase header ul li{
+    list-style: none;
+    text-transform: uppercase;
+    display: inline;
+    margin: 0px 10px;
+}
+
+.header-btn{
+    display: inline-block;
+    font-size: 1em;
+    background: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.header-btn:hover{
+    letter-spacing: 6px;
+}
+
+.title{
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+@media(max-width: 991px) {
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    }
+
+    img{
+        width: 400px;
+        height: 400px;
+    }
+
+    video{
+        width: 400px;
+        height: 400px;
+    }
+
+    .title{
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width: 400px){
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    }
+
+    img{
+        width: 300px;
+        height: 300px;
+    }
+
+    video{
+        width: 300px;
+        height: 300px;
+    }
+
+    .title{
+        font-size: 1em;
+    }
+}
